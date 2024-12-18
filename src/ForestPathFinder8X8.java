@@ -53,27 +53,6 @@ public class ForestPathFinder8X8 {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.print("Enter your path (63 characters of U, D, L, R, or *): ");
-        Scanner sc = new Scanner(System.in);
-        String input = sc.nextLine().trim();
-        sc.close();
-
-        if (!isValidInput(input)) {
-            System.out.println("Invalid input");
-            return;
-        }
-
-        input.getChars(0, MOVES, pathArr, 0);
-
-        long start = System.currentTimeMillis();
-        long totalPaths = countPaths();
-        long end = System.currentTimeMillis();
-
-        System.out.println("Total paths: " + totalPaths);
-        System.out.println("Time (ms): " + (end - start));
-    }
-
     // Validate that the input is exactly MOVES characters and contains only U, D, L, R, or *
     private static boolean isValidInput(String path) {
         if (path.length() != MOVES) return false;
@@ -147,5 +126,26 @@ public class ForestPathFinder8X8 {
             }
         }
         return count == needed;
+    }
+
+    public static void main(String[] args) {
+        System.out.print("Enter your path (63 characters of U, D, L, R, or *): ");
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine().trim();
+        sc.close();
+
+        if (!isValidInput(input)) {
+            System.out.println("Invalid input");
+            return;
+        }
+
+        input.getChars(0, MOVES, pathArr, 0);
+
+        long start = System.currentTimeMillis();
+        long totalPaths = countPaths();
+        long end = System.currentTimeMillis();
+
+        System.out.println("Total paths: " + totalPaths);
+        System.out.println("Time (ms): " + (end - start));
     }
 }
