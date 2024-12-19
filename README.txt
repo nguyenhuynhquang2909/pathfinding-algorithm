@@ -3,3 +3,7 @@ Contribution Score
 2. Han Yeeun - s3912055L: 3
 3. Nguyen Huynh Quang - s3927039: 3
 4. Nguyen Linh Chi - s3878609: 3
+
+| Minsung Kim | Han Yeeun | Nguyen Huynh Quang | Nguyen Linh Chi |
+| --- | --- | --- | --- |
+| 3 | 3 | 3 | 3 |
